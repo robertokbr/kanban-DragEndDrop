@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="boards">
     <div class="board">
-    <h3></h3>
-    <div class="card">
-      <div class="status"></div>
-      <div class="content"></div>
+      <h3>TODO</h3>
+      <div class="dropzone">
+        <div class="card" draggable="true">
+          <div class="status green"></div>
+          <div class="content">STUDY </div>
+        </div>
+      </div>
     </div>
+
+
+
+    <div class="board">
+      <h3>IN PROGRESS</h3>
+      <div class="dropzone">
+        <div class="card" draggable="true">
+          <div class="status blue"></div>
+          <div class="content">DEV MY PORTFOLIO </div>
+        </div>
+      </div>
     </div>
-  </div>                                                                 
+
+    <div class="board">
+      <h3>DONE</h3>
+      <div class="dropzone">
+        <div class="card" draggable="true">
+          <div class="status red"></div>
+          <div class="content">WEB SIMPLE KANBAN </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </body>
+
 </html>
