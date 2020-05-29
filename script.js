@@ -1,6 +1,6 @@
 const cards = document.querySelectorAll('.card')
 const dropzones = document.querySelectorAll('.dropzone')
-
+const allStatus = document.querySelectorAll('.status') 
 
 /*CARDZONE */
 
@@ -14,7 +14,7 @@ cards.forEach( card => {
 function dragstart(){
   dropzones.forEach( dropzone => dropzone.classList.add('highlight'))
   this.classList.add('is-dragging')
-
+  
 } 
 function drag(){
   
@@ -39,7 +39,7 @@ dropzones.forEach( dropzone =>{
 })
 
 function dragenter(){
-
+  
 }
 function dragover()
 {
@@ -50,14 +50,37 @@ function dragover()
 function dragleave()
 {
   this.classList.remove('over')
-
+  
   
 }
 function drop()
 {
   this.classList.remove('over')
-
+  
   
 }
 
 
+/*STATUS */
+
+allStatus.forEach( status => {
+  status.addEventListener('click', changeStatus)
+})
+
+
+function changeStatus(){
+  const value = this.classList.value
+  if (value == 'status statusgreen'){
+    this.classList.remove('statusgreen')
+    this.classList.add('statusred')
+    
+  }else if(value == 'status statusred'){ 
+    this.classList.remove('statusred')
+    this.classList.add('statusblue')
+  }else if(value == 'status statusblue'){
+    this.classList.remove('statusblue')
+    this.classList.add('statusgreen')
+
+  }
+  
+}

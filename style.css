@@ -54,17 +54,17 @@ margin: 32px ;
   border-radius: 8px;
 }
 
-.status.green{
+.statusgreen{
   background-color: #23d2ac;
 }
 
 
-.status.blue{
+.statusblue{
   background-color: #33adff;
 }
 
 
-.status.red{
+.statusred{
   background-color: red;
 }
 .card, .dropzone{
