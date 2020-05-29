@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Kanban Board</title>
+  <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+  
+  <header>
+    
+    <div class="head">
+      <img src="../public/assets/marketing 1.svg" alt="icon">
+      <div class="headInfo">
+        <h3>Cards Drag&Drop</h3>
+        <p>Roberto Junior</p>
+      </div>
+    </div>
+    
+    <div class="icons">
+      <a href="#" onclick="build()">
+        <img src="../public/assets/plus.svg" alt="plus">
+      </a>
+    </div>
+    
+  </header>
+  
+  
+  <div class="boards">
+    <div class="board">
+      
+      <div class="boardTitle">
+        
+        <h3>TODO</h3>
+        
+        <a href="#" onclick="newCard(0)">
+          <img src="../public/assets/plus.svg" alt="add">
+        </a>
+        
+      </div>
+      
+      <div class="dropzone">
+        <div class="card" draggable="true"  >
+          <div class="status statusgreen"></div>
+          <div class="content">STUDY </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="board">
+      <div class="boardTitle">
+        <h3>IN PROGRESS</h3>
+        <a href="#" onclick="newCard(1)">
+          <img src="../public/assets/plus.svg" alt="add">
+        </a>
+      </div>
+      <div class="dropzone">
+        <div class="card" draggable="true">
+          <div class="status statusblue"></div>
+          <div class="content">DEV MY PORTFOLIO </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="board">
+      <div class="boardTitle">
+        <h3>DONE</h3>
+        <a href="#" onclick="newCard(2)">
+          <img src="../public/assets/plus.svg" alt="add">
+        </a>
+      </div>
+      <div class="dropzone">
+        <div class="card" draggable="true">
+          <div class="status statusred"></div>
+          <div class="content">WEB SIMPLE KANBAN </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  
+  
+  <script src="../public/script.js" defer></script>
+  
+</body>
+
+</html>

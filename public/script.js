@@ -1,7 +1,47 @@
+const boards = document.querySelector('.boards')
 const cards = document.querySelectorAll('.card')
 const dropzones = document.querySelectorAll('.dropzone')
 const allStatus = document.querySelectorAll('.status') 
 
+var n= 3; 
+
+function build(){
+  n++; 
+  boards.insertAdjacentHTML('beforeend',`
+  <div class="board">
+      
+      <div class="boardTitle">
+        
+        <h3>NEW BOARD</h3>
+        
+        <a href="#" onclick="newCard(${n})">
+          <img src="../public/assets/plus.svg" alt="add">
+        </a>
+        
+      </div>
+      
+      <div class="dropzone">
+        <div class="card" draggable="true"  >
+          <div class="status statusgreen"></div>
+          <div class="content">TEXT </div>
+        </div>
+      </div>
+    </div>
+  `)
+}
+
+
+function newCard(n){
+  const plus = document.querySelectorAll('.dropzone')
+  plus[n].insertAdjacentHTML('beforeend',`
+ 
+  <div class="card" draggable="true">
+  <div class="status statusblue"></div>
+  <div class="content">TEXT</div>
+  </div>
+  
+  `)
+}
 /*CARDZONE */
 
 cards.forEach( card => {
@@ -9,8 +49,6 @@ cards.forEach( card => {
   card.addEventListener('drag', drag)
   card.addEventListener('dragend', dragend)
 })
-
-
 function dragstart(){
   dropzones.forEach( dropzone => dropzone.classList.add('highlight'))
   this.classList.add('is-dragging')
@@ -24,7 +62,6 @@ function dragend(){
   this.classList.remove('is-dragging')
   
 }
-
 
 /*DROPZONE */
 
@@ -60,13 +97,11 @@ function drop()
   
 }
 
-
 /*STATUS */
 
 allStatus.forEach( status => {
   status.addEventListener('click', changeStatus)
 })
-
 
 function changeStatus(){
   const value = this.classList.value
@@ -80,7 +115,7 @@ function changeStatus(){
   }else if(value == 'status statusblue'){
     this.classList.remove('statusblue')
     this.classList.add('statusgreen')
-
+    
   }
   
 }
