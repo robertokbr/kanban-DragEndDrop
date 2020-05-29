@@ -67,11 +67,20 @@ margin: 32px ;
 .status.red{
   background-color: red;
 }
+.card, .dropzone{
+  transition: 400ms;
+}
 
 .highlight{
   background-color: #fd951f08;
 }
 
-.card, .dropzone{
-  transition: 400ms;
+.is-dragging{
+  cursor: move;
+  opacity: 0.3;
+}
+
+.over{
+  background-color: #4cd13711;
+
 }
