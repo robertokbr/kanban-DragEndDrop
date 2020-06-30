@@ -6,6 +6,7 @@ font-family: 'Nunito';
 box-sizing: border-box;
 }
 
+
 body{
   background-color: #130f0d;
   color: white;
@@ -30,6 +31,11 @@ min-width: 50px;
 margin: 8px 10px 8px 50px;
 }
 
+div.icons {
+display: flex;
+margin-right: 50px;
+}
+
 div.icons img{
 max-width: 30px ;
 max-height:30px;
@@ -47,10 +53,15 @@ margin-top: 0;
   color: rgba(255, 255, 255, 0.568);
 }
 
+.backgroundHidden img{
+width: 700px;
+margin-left: 600px;
+}
+/*grid-template-columns: repeat(5, 1fr);*/
 .boards{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 margin: 32px ;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(332px, 370px));
 
 }
 .board{
@@ -71,13 +82,15 @@ margin: 32px ;
 }
 .boardTitle{
   display: flex;
-  justify-content: space-between;
   align-items: center;
+justify-content: space-between;
+
+
 }
 
 .boardTitle img{
 max-width: 20px;
-margin-right: 18px;
+margin-right: 20px;
 }
 
 
@@ -136,3 +149,6 @@ margin-right: 18px;
   background-color: #4cd13711;
 
 }
+
+
+
